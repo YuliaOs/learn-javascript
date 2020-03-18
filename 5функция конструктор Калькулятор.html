@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    function Calculator () {
+        this.read = function() {
+            // this.read.a = rompt("a?", 0);
+            // this.read.b = prompt("b?", 0);
+            this.read.a = 5;
+            this.read.b = 10;
+        },
+        this.sum = function() {
+            return this.read.a + this.read.b;
+        },
+        this.mul = function() {
+            return this.read.a * this.read.b;
+        }
+    };
+    function a () {
+        console.log("a");
+        console.log("a1");
+        console.log("a2")
+    }
+    function b () {
+        console.log("b");
+        console.log("b1");
+        console.log("b2")
+    }
+    function ab () {
+        console.log("ab");
+        console.log("ab1");
+        console.log("ab2")
+    }
+    let calculator = new Calculator();
+    calculator.read();
+    //
+    alert( "Sum= " + calculator.sum() );
+    alert( "Mul= " + calculator.mul() );
+    // a();
+    // b();
+    // ab();
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+  /*  Напишите деструктурирующее присваивание, которое:
+
+    свойство name присвоит в переменную name.
+        свойство years присвоит в переменную age.
+        свойство isAdmin присвоит в переменную isAdmin (false, если нет такого свойства)*/
+    let user = {
+        name: "John",
+        years: 30
+    };
+    let {name, years:age,isAdmin = false} = user;
+
+    // ваш код должен быть с левой стороны:
+    // ... = user
+
+    alert( name ); // John
+    alert( age ); // 30
+    alert( isAdmin ); // false
+
+</script>
+<body>
+
+</body>
+</html>

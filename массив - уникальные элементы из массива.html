@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+
+    function unique(arr) {
+        return Array.from(new Set(arr));
+    };
+    /*function unique(arr) {
+
+      // let mySet = new Set(arr);
+
+      /!*  for (let str of arr) {
+            mySet.add(str);
+        }
+
+        newArr = [];
+        for (let value of mySet) {
+            newArr.push(value);
+        }
+
+        return newArr;*!/
+    }*/
+
+    let strings = ["собака", "и", "кошка", "кошка",
+        "и", "и", "собака", "и", "животные"
+    ];
+
+    alert( unique(strings) ); // только уникальные
+
+</script>
+<body>
+
+</body>
+</html>

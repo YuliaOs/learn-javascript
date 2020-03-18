@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+function printNum(a,b, ...num) {
+
+   let result = num.reduce((sum,current) => sum + current,0)
+    console.log(a, b, result);
+
+}
+
+printNum(1,2,3,4,5,6);
+
+
+
+/*
+let a = [1,2,3];
+console.log(...a);
+*/
+
+</script>
+<body>
+
+</body>
+</html>

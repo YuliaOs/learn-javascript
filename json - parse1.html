@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+
+  /*  Преобразуйте user в JSON, затем прочитайте этот JSON в другую переменную.
+
+        let user = {
+        name: "Василий Иванович",
+        age: 35
+    };*/
+
+  let user = {
+      name: "Василий Иванович",
+      age: 35
+
+  };
+
+  let json = JSON.stringify(user);
+console.log(json);
+
+ let user1 = JSON.parse(json);
+ console.log(user1);
+
+
+
+
+   
+</script>
+<body>
+
+</body>
+</html>

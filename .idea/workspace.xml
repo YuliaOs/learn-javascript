@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="970eccfb-5a18-4d67-b3be-aaaf2a229aaa" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="untitled" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1TZPbhvW50ygxgYkFoCE9dLUaQ5" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Юля\WebstormProjects\untitled" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.массив - сдвинуть эл-ы вправо 7.html">
+    <configuration name="массив - сдвинуть эл-ы вправо 7.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled/массив - сдвинуть эл-ы вправо 7.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="1Test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled/1Test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="5функция конструктор Калькулятор.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled/5функция конструктор Калькулятор.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="6Лестница2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled/6Лестница2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="JS1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/JS1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.массив - сдвинуть эл-ы вправо 7.html" />
+        <item itemvalue="JavaScript Debug.6Лестница2.html" />
+        <item itemvalue="JavaScript Debug.5функция конструктор Калькулятор.html" />
+        <item itemvalue="JavaScript Debug.1Test.html" />
+        <item itemvalue="Node.js.JS1.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="970eccfb-5a18-4d67-b3be-aaaf2a229aaa" name="Default Changelist" comment="" />
+      <created>1573664717760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573664717760</updated>
+      <workItem from="1573664720789" duration="5709000" />
+      <workItem from="1574146271581" duration="5767000" />
+      <workItem from="1574179317026" duration="3238000" />
+      <workItem from="1578590088665" duration="1620000" />
+      <workItem from="1579075635304" duration="1334000" />
+      <workItem from="1579088571907" duration="663000" />
+      <workItem from="1579164367842" duration="1948000" />
+      <workItem from="1579166903927" duration="611000" />
+      <workItem from="1579173982775" duration="1547000" />
+      <workItem from="1579245583700" duration="1792000" />
+      <workItem from="1579247411892" duration="2146000" />
+      <workItem from="1579263823316" duration="870000" />
+      <workItem from="1579441875325" duration="124000" />
+      <workItem from="1579443600823" duration="81000" />
+      <workItem from="1579443705456" duration="34000" />
+      <workItem from="1579443792918" duration="4185000" />
+      <workItem from="1579508437096" duration="37720000" />
+      <workItem from="1580377842737" duration="16631000" />
+      <workItem from="1580807521209" duration="12357000" />
+      <workItem from="1582714536787" duration="45658000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

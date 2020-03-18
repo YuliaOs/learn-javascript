@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    let calculator = {
+        read() {
+            this.a = +prompt("Ввести число а", " ");
+            this.b = +prompt("ввести число b", " ");
+        },
+        sum() {
+            this.c = this.a + this.b;
+            return this.c;
+        },
+        mul() {
+            this.d = this.a * this.b;
+            return this.d;
+        }
+    };
+
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<script>
+    'use strict';
+
+    let map = new Map();
+    map.set("name", "John");
+
+    //let keys = map.keys(); - не работает, потому что map.keys() возвращает итерируемый объект, а не массив.
+    // Ошибка: keys.push -- это не функция
+    // Error: keys.push is not a function
+    let keys = Array.from(map.keys());
+
+
+    keys.push("more");
+    console.log(keys); // [name, more]
+
+    console.log(map);
+
+
+
+</script>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+   // let str = "Привет, как ваши дела? Будем знакомы!";
+    //truncate(str,6);
+    truncate("Вот, что мне хотелось бы сказать на эту тему:", 20);
+
+    function truncate (str, maxlength) {
+
+        if (str.length > maxlength) {
+            str = str.slice(0, maxlength-1);
+        };
+        return alert (str + "...");
+    };
+
+
+    //truncate("Вот, что мне хотелось бы сказать на эту тему:", 20); //= "Вот, что мне хотело…"
+
+   //truncate("Всем привет!", 20); // = "Всем привет!"
+
+
+
+</script>
+<body>
+
+</body>
+</html>

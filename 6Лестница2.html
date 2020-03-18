@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+   /* let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // показывает текущую ступеньку
+            alert( this.step );
+            return this;
+        }
+    };
+    ladder.up().up().down().showStep(); // 1*/
+
+   function Accumulator(startingValue) {
+       this.value = startingValue;
+
+       this.read = function () {
+           this.value += +prompt("На сколько значений прибавить?", 0);
+       };
+   }
+
+    let accumulator = new Accumulator(1); // начальное значение 1
+
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+
+    alert(accumulator.value); // выведет сумму этих значений
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

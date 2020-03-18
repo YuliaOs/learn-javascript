@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+
+ /*числавывести числа от A до Б*/
+
+    function printNumbers(a,b) {
+        if (a==b) {
+            console.log(b);
+            return;
+        } else {
+            console.log(a);
+            printNumbers(a+1,b);
+            return;
+        }
+    }
+
+    printNumbers(2,41);
+   
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+
+
+
+
+    let arr = [3, 1, 2];
+
+   alert(arr.sort((a, b) => if (b > a ) {1;});
+ let a=0;
+    for (i=0; i<arr.length; i++ ) {
+       for (j=0; j<arr.length; j++) {
+           if (compare(arr[i], arr[j])) {
+               a = arr[i];
+               arr[i] = arr[j];
+               arr[j] = a;
+           console.log(arr + " " + i + " " + j);
+           }
+       }
+
+    }
+
+    function compare (a1,b1) {
+        return a1 > b1
+    }
+
+    alert( arr ); //3,2,1
+
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>
