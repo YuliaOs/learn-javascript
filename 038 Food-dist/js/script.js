@@ -348,10 +348,10 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }, 4000);
     }
-
-    fetch('db.json')
-        .then(data => data.json())  // превращаем в обыч js объект
-        .then(res => console.log(res));
+    //
+    // fetch('db.json')
+    //     .then(data => data.json())  // превращаем в обыч js объект
+    //     .then(res => console.log(res));
 });
 
 
