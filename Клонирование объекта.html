@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let obj1 = {
+        a: 1,
+        b: 21,
+        c: {
+            d: 3, e: 5,
+        }
+    };
+
+    let clone = Object.assign({}, obj1);
+    clone.b = 30; // изменит значение только в clone
+    clone.c.d = 9; // изменит значение в obj1 и в clone тоже
+    console.log(obj1);
+    console.log(clone);
+
+
+
+
+</script>
+</body>
+</html>

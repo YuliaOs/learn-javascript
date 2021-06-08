@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+  /*  Прототип даёт нам немного «магии». Когда мы хотим прочитать свойство из object, а оно отсутствует, JavaScript автоматически берёт его из прототипа. В программировании такой механизм называется «прототипным наследованием». Многие интересные возможности языка и техники программирования основываются на нём.
+
+        Свойство [[Prototype]] является внутренним и скрытым, но есть много способов задать его.
+
+        Одним из них является использование __proto__, например так:
+*/
+  let animal = {
+      eats: true
+  };
+  let rabbit = {
+      jumps: true
+  };
+
+  rabbit.__proto__ = animal; // (*)
+
+  // теперь мы можем найти оба свойства в rabbit:
+  alert( rabbit.eats ); // true (**)
+  alert( rabbit.jumps ); // true
+  /*Здесь строка (*) устанавливает animal как прототип для rabbit.*/
+
+
+  let animal = {
+      eats: true,
+      walk() {
+          alert("Animal walk");
+      }
+  };
+
+  let rabbit = {
+      jumps: true,
+      __proto__: animal
+  };
+
+  // walk взят из прототипа
+  rabbit.walk(); // Animal walk
+
+
+
+
+
+    
+</script>
+<body>
+
+</body>
+</html>

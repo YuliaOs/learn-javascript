@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    'use strict';
+
+    let sayMixin = {
+        say(phrase) {
+            alert(phrase);
+        }
+    };
+
+    let sayHiMixin = {
+        __proto__: sayMixin, // (или мы можем использовать Object.create для задания прототипа)
+
+        sayHi() {
+            // вызываем метод родителя
+            super.say(`Привет, ${this.name}`); // (*)
+        },
+        sayBye() {
+            super.say(`Пока, ${this.name}`); // (*)
+        }
+    };
+
+   /* let user = {
+        __proto__: sayHiMixin,
+        name: "asd"
+    };
+
+    user.sayHi();*/
+
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    // копируем методы
+    Object.assign(User.prototype, sayHiMixin);
+
+    // теперь User может сказать Привет
+    new User("Вася").sayHi(); // Привет, Вася!
+
+
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /*Повторный bind
+    важность: 5
+    Можем ли мы изменить this дополнительным связыванием?
+
+        Что выведет этот код?*/
+
+        function f() {
+            alert(this.name);
+        }
+
+        f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+
+    f();
+
+   /* Ответ: undefined.
+
+        Результатом работы bind является другой объект. У него уже нет свойства test.*/
+
+</script>
+<body>
+
+</body>
+</html>

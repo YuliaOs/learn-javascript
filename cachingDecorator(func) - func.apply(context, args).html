@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let worker = {
+        slow(min, max) {
+            alert(`Called with ${min},${max}`);
+            return min + max;
+        }
+    };
+
+    function cachingDecorator(func, hash) {
+        let cache = new Map();
+        return function() {
+            let key = hash(arguments); // (*)
+            if (cache.has(key)) {
+                return cache.get(key);
+            }
+
+            let result = func.call(this, ...arguments); // (**)
+
+            cache.set(key, result);
+            return result;
+        };
+    }
+
+    function hash(args) {
+        return args[0] + ',' + args[1];
+    }
+
+    worker.slow = cachingDecorator(worker.slow, hash);
+
+    alert( worker.slow(3, 5) ); // работает
+    alert( "Again " + worker.slow(3, 5) ); // аналогично (из кеша)
+    /*Теперь он работает с любым количеством аргументов.
+
+        Есть два изменения:
+
+        В строке (*) вызываем hash для создания одного ключа из arguments.
+        Здесь мы используем простую функцию «объединения», которая превращает аргументы (3, 5) в ключ "3,5".
+        В более сложных случаях могут потребоваться другие функции хеширования.
+        Затем в строке (**) используем func.call(this, ...arguments) для передачи как контекста,
+        так и всех аргументов, полученных обёрткой (независимо от их количества), в исходную функцию.
+        Вместо func.call(this, ...arguments) мы могли бы написать func.apply(this, arguments).
+
+        Синтаксис встроенного метода func.apply:
+
+    func.apply(context, args)*/
+
+ //   func.call(context, ...args); // передаёт массив как список с оператором расширения
+ //   func.apply(context, args);   // тот же эффект
+  //  Есть только одна небольшая разница:
+
+  //      Оператор расширения ... позволяет передавать перебираемый объект args в виде списка в call.
+   //     А apply принимает только псевдомассив args.
+
+
+
+</script>
+<body>
+
+</body>
+</html>

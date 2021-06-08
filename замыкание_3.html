@@ -31,8 +31,40 @@ users.sort(byField('age'));
 
 Напишите функцию byField, которая может быть использована для этого.
  */
-C:\Users\Юля\WebstormProjects\untitled\list_1.html
 
+let users = [
+    { name: "Ann", age: 30, surname: "Hathaway" },
+    { name: "MAnn", age: 15, surname: "Hathaway" },
+    { name: "KAnn", age: 14, surname: "Hathaway" },
+    { name: "SAnn", age: 19, surname: "Hathaway" },
+    { name: "John", age: 20, surname: "Johnson" },
+    { name: "Pete", age: 18, surname: "Peterson" },
+    { name: "TAnn", age: 29, surname: "Hathaway" },
+    { name: "Ann", age: 12, surname: "Hathaway" },
+    { name: "Ann", age: 13, surname: "Hathaway" }
+];
+
+
+//по имени (Ann, John, Pete)
+//users.sort((a, b) => a.name > b.name ? 1 : -1);
+
+
+//по возрасту (Pete, Ann, John)
+//users.sort((a, b) => a.age > b.age ? 1 : -1);
+
+function byField(FieldKey){
+    return function (a,b) {
+
+        if (a[FieldKey] > b[FieldKey]) {
+            return 1
+        } else {
+            return -1;
+        }
+    }
+}
+users.sort(byField('name'));
+
+console.log(users);
 
 </script>
 <body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    class Circle {
+        constructor (colorLineArg, backgroundColorArg, diameterArg, widthLineArg) {
+                      this.colorLine = colorLineArg;
+                      this.backgroundColor = backgroundColorArg;
+                      this._diameter = diameterArg;
+                      this.widthLine = widthLineArg;
+
+                     if (+this._diameter < 0 || +this.widthLine < 0) {
+                         alert ("ошибка, " + this._diameter + " или " + this.widthLine + " меньше 0")
+                     }
+        }
+
+        printCircle () {
+           return ("Круг с заданными параметрами: цвет линии - " + this.colorLine + ", цвет фона - " + this.backgroundColor +
+            ", диаметр - " + this.diameter);
+        }
+
+        get colorLine() {
+            return this._colorLine;
+        }
+        set colorLine(value) {
+
+            this._colorLine = value;
+        }
+
+        get backgroundColor() {
+            return this._backgroundColor;
+        }
+        set backgroundColor(value) {
+
+            this._backgroundColor = value;
+        }
+
+       get diameter() {
+            return this._diameter;
+        }
+
+
+
+
+    }
+
+
+
+    let circle = new Circle("зеленый", "прозрачный", '-20', "1");
+    circle.widthLine = -1;
+    alert(circle.widthLine);
+   /* alert (circle.printCircle());
+
+    circle.colorLine = "голубой";
+    circle.backgroundColor = "фиолетовый";
+    alert (circle.diameter);
+    alert (circle.printCircle());
+    circle.widthLine = "5";
+    alert(circle.widthLine);*/
+
+
+
+// диаметр цвет линии цвет заливки
+</script>
+<body>
+
+</body>
+</html>

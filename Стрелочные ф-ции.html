@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let group = {
+        title: "Our Group",
+        students: ["John", "Pete", "Alice"],
+
+        showList() {
+            this.students.forEach(
+                student => console.log(this.title + ': ' + student)
+            );
+        }
+    };
+
+    group.showList();
+
+</script>
+<body>
+
+</body>
+</html>

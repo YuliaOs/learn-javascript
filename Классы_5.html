@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    class Figure {
+
+        constructor(name) {
+            this.name = name+"..";
+            /*Figure.prototype.toString = function figureToString() {
+                return `Фигура --${this.name}-- с параметрами:
+                цвет линии -- ${this.colorLine}--
+                цвет фона -- ${this.bgColor}--`
+
+            };*/
+
+        }
+        /*print() {
+            let figure = JSON.stringify(this);
+            alert(figure);
+        }*/
+
+        print() {
+            alert(`ФИГУРЕ ${this.name}: ${this.toString()}`);
+        }
+
+
+    }
+
+    class Oval extends Figure {
+        constructor (name, diametr1,diametr2) {
+            super(name);
+            this.diametr1 = diametr1;
+            this.diametr2 = diametr2;
+
+            Oval.prototype.toString = function OvalToString() {
+                return `--${this.name}-- с параметрами:
+                диаметр1 = --${this.diametr1}-- см
+                диаметр2 = --${this.diametr2}-- см`
+            }
+        }
+
+        get diametr1(){
+            return this._diametr1;
+        }
+        set diametr1(value) {
+            this._diametr1 = value;
+        }
+
+        get diametr2(){
+            return this._diametr2;
+        }
+        set diametr2(value) {
+            this._diametr2 = value;
+        }
+    }
+
+       class Triangle extends Figure {
+        constructor(name, lengthSide1, lengthSide2, lengthSide3){
+            super(name);
+            this.lengthSide1 = lengthSide1;
+            this.lengthSide2 = lengthSide2;
+            this.lengthSide3 = lengthSide3;
+            Triangle.prototype.toString = function triangleToString() {
+                return `--${this.name}-- с параметрами:
+                длины сторон -- ${this.lengthSide1}, ${this.lengthSide2}, ${this.lengthSide3}--
+                цвет линии -- ${this.colorLine}--
+                цвет фона -- ${this.bgColor}--`
+
+            };
+
+        }
+
+        get lengthSide1() {
+            return this._lengthSide1;
+        }
+        set lengthSide1(value) {
+            this._lengthSide1 = value;
+        }
+
+        get lengthSide2() {
+            return this._lengthSide2;
+        }
+        set lengthSide2(value) {
+            this._lengthSide2 = value;
+        }
+
+        get lengthSide3() {
+            return this._lengthSide3;
+        }
+        set lengthSide3(value) {
+            this._lengthSide3 = value;
+        }
+    }
+
+    class Square extends Figure {
+
+        constructor( lengthSide) {
+            super("square");
+            this.lengthSide = +lengthSide;
+
+
+            Square.prototype.toString = function () {
+                return `--${this.name}-- с параметрами:
+                длины сторон -- ${this.lengthSide} --
+                цвет линии -- ${this.colorLine}--
+                цвет фона -- ${this.bgColor}--`
+            }
+        }
+
+        get lengthSide(){
+            return this._lengthSide;
+        }
+        set lengthSide(value){
+            this._lengthSide = value;
+        }
+
+
+        get colorLine(){
+            return this._colorLine;
+        }
+        set colorLine(value){
+            this._colorLine = value;
+        }
+
+
+    }
+
+    /*let ovalOne = new Oval("Овал", "2", "6");
+    ovalOne.diametr1 = "8";
+    ovalOne.print.call(ovalOne);*/
+
+   let squareOne = new Square("треуг", "3","3","3","3");
+    squareOne.lengthSide = 5;
+    squareOne.colorLine = "зеленый";
+    //squareOne.print.call(squareOne);
+
+    squareOne.name = "newName";
+    squareOne.print();
+
+   /* let one = new Triangle("Треугольник", "5", "3", "7");
+    one.bgColor = "красный";
+    one.colorLine = "зеленый";
+    one.lengthSide2 = "12";
+    one.print.call(one);*!/
+
+  /*  let fig = new Figure("многоугольник", "голубой", "фиолет");
+    fig.colorLine = "розовый";
+    fig.print.call(fig);
+*/
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+   /* Напишите функцию printNumbers(from, to), которая выводит число каждую секунду, начиная от from и заканчивая to.
+
+Сделайте два варианта решения.
+
+Используя setInterval.
+Используя рекурсивный setTimeout.*/
+
+/*function printNumbers (from,to){
+    let current = from;
+    setTimeout(function print() {
+        alert(current);
+        if (current<to) {
+            setTimeout(print, 1000);
+        } current++;
+
+    },1000);
+
+};*/
+
+/*
+function printNumbers (from,to) {
+    let current = from;
+    function print(){
+        alert(current);
+        if (current < to) {
+            setTimeout(print, 1000);
+        } current++;
+    }
+    setTimeout(print,1000);
+}
+*/
+
+
+
+
+
+
+   /*function printNumbers (from,to){
+       let current = from;
+       let timerId = setInterval(function print() {
+           alert(current);
+
+           if (current == to) {
+               clearInterval(timerId);
+           }
+           current++;
+       },1000);
+
+   };*/
+
+   /*function printNumbers(from, to) {
+       let current = from;
+
+       function print() {
+           alert(current);
+           if (current == to) {
+               clearInterval(timerId);
+           }
+           current++;
+       }
+
+       print(); // чтобы запускалась сразу, без начальной задержки в 1 сек
+       let timerId = setInterval(print, 1000);
+   }
+
+   printNumbers(5, 10);*/
+
+   function printNumbers(start, end){
+       alert(start);
+       return (start == end) ? 0 : setTimeout(printNumbers, 1000, ++start, end);
+   }
+printNumbers(0,5);
+
+
+</script>
+<body>
+
+</body>
+</html>

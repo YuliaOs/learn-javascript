@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <script>
+    'use strict';
 
-    let calculator = {
-        read() {
-            this.a = +prompt("Ввести число а", " ");
-            this.b = +prompt("ввести число b", " ");
-        },
-        sum() {
-            this.c = this.a + this.b;
-            return this.c;
-        },
-        mul() {
-            this.d = this.a * this.b;
-            return this.d;
+    function first() {
+        function Rabbit() {
+            this.number = Math.random();
         }
-    };
+        new Rabbit(); // наследует от {constructor: Rabbit}
+    }
+    // по умолчанию:
+    // Rabbit.prototype = { constructor: Rabbit }
 
-    calculator.read();
-    alert( calculator.sum() );
-    alert( calculator.mul() );
+    // alert(Rabbit); // true (свойство получено из прототипа)
 
+    let rabbit = first();
+
+    function doSth(rabbit) {
+        alert(new rabbit.constructor());
+
+    }
+
+    doSth(rabbit);
 
 </script>
 <body>

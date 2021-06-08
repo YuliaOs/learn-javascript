@@ -1,0 +1,15 @@
+button {
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: lightblue;
+    font-family: Consolas;
+    font-size: medium;
+    font-style: inherit;
+    font-weight: normal;
+    color: darkblue;
+    border-color: cornflowerblue;
+}

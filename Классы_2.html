@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    class Cupboard {
+        constructor (maxSize, color, room) {
+                      this.maxSize = +maxSize;
+                      this._color = color;
+                      this.room = room;
+
+            this.isOpen = false;
+            this.content = [];
+
+            if (this.content.length <= 0) {
+
+                alert("Шкаф пустой")
+            }
+        }
+
+        printCupboard () {
+            return `Шкаф стоит в комнате - ${this.room}, цвета - ${this.color} ,
+            положите максимум ${this.maxSize} вещей, иначе он лопнет. Наполнение шкафа: ${this.content}`
+        }
+
+        openCupboard() {
+            this.isOpen = true;
+        }
+
+        closeCupboard() {
+            this.isOpen = false;
+        }
+
+        putSmth(smth) {
+            alert(`Пытаюсь положить в шкаф --${smth}--`);
+            if (this.content.length >=  this.maxSize) {
+                alert (`Не суйте столько вещей! Шкаф битком, --${smth}-- не влезает`)
+            } else if (this.isOpen) {
+                this.content.push(smth);
+
+                alert(`--${smth}-- сложены в шкаф`);
+            } else {
+                alert(`Ты сначала шкаф то открой!`)
+            }
+        }
+
+        takeSmth(smth) {
+            let index = this.content.indexOf(smth);
+
+
+                if (this.isOpen) {
+                    this.content.splice(index, 1);
+                    alert(`Достаю из шкафа --${smth}--`)
+                } else {
+                    alert(`Ты сначала шкаф то открой!`)
+                }
+
+                if (this.content.length <= 0) {
+                        alert("Шкаф пустой. Вы достали все вещи")
+                }
+        }
+
+
+
+        get room() {
+            return this._room;
+        }
+        set room(value) {
+            this._room = value;
+        }
+
+        get color() {
+            return this._color;
+        }
+
+        get maxSize() {
+            return this._maxSize;
+        }
+        set maxSize(value) {
+            return this._maxSize = value;
+        }
+
+
+
+    }
+
+    let myCupboard = new Cupboard("2", "венге", "спальня");
+
+    myCupboard.room = "кухня";
+    myCupboard.maxSize = "3";
+    /*alert(myCupboard.room);*/
+    /*
+    alert(myCupboard.openCupboard());*/
+    myCupboard.openCupboard();
+     myCupboard.putSmth("носки");
+     myCupboard.putSmth("кофта");
+     myCupboard.putSmth("свитер");
+     myCupboard.putSmth("штаны");
+    myCupboard.color = "зеленый";
+    alert(myCupboard.printCupboard());
+    //myCupboard.closeCupboard();
+    myCupboard.takeSmth("носки");
+    alert(myCupboard.printCupboard());
+    myCupboard.takeSmth("свитер");
+    alert(myCupboard.printCupboard());
+    myCupboard.takeSmth("кофта");
+    alert(myCupboard.printCupboard());
+
+
+   /* let circle = new Circle("зеленый", "прозрачный", '-20', "1");
+    circle.widthLine = -1;
+    alert(circle.widthLine);*/
+   /* alert (circle.printCircle());
+
+    circle.colorLine = "голубой";
+    circle.backgroundColor = "фиолетовый";
+    alert (circle.diameter);
+    alert (circle.printCircle());
+    circle.widthLine = "5";
+    alert(circle.widthLine);*/
+
+
+
+// диаметр цвет линии цвет заливки
+</script>
+<body>
+
+</body>
+</html>

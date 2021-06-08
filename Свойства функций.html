@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+  /*
+   1 - свойство name
+   function sayHi() {
+        alert("Hi");
+    }
+
+    alert(sayHi.name); // sayHi
+ или
+    function f(sayHi = function() {}) {
+        alert(sayHi.name); // sayHi (работает!)
+    }
+
+    f();
+
+    ___________________________________________
+
+    // функция объявлена внутри массива
+let arr = [function() {}];
+
+alert( arr[0].name ); // <пустая строка>
+// здесь отсутствует возможность определить имя, поэтому его нет
+
+
+      2 - Свойство «length»
+      function f1(a) {}
+function f2(a, b) {}
+function many(a, b, ...more) {}
+
+alert(f1.length); // 1
+alert(f2.length); // 2
+alert(many.length); // 2
+_______________________________________
+ 3 - пользовательские свойства (counter)
+
+ function sayHi() {
+  alert("Hi");
+
+  // давайте посчитаем, сколько вызовов мы сделали
+  sayHi.counter++;
+}
+sayHi.counter = 0; // начальное значение
+
+sayHi(); // Hi
+sayHi(); // Hi
+
+alert( `Вызвана ${sayHi.counter} раза` ); // Вызвана 2 раза
+
+__________________________________________________________
+
+function makeCounter() {
+  // вместо
+  // let count = 0
+
+  function counter() {
+    return counter.count++;
+  };
+
+  counter.count = 0;
+
+  return counter;
+}
+
+let counter = makeCounter();
+alert( counter() ); // 0
+alert( counter() ); // 1
+ ___________________________________
+    let sayHi = function func(who) {
+  if (who) {
+    alert(`Hello, ${who}`);
+  } else {
+    func("Guest"); // Теперь всё в порядке
+  }
+};
+
+let welcome = sayHi;
+sayHi = null;
+
+welcome(); // Hello, Guest (вложенный вызов работает)
+
+Теперь всё работает, потому что имя "func" локальное и находится внутри функции. Теперь оно взято не снаружи
+(и недоступно оттуда). Спецификация гарантирует, что оно всегда будет ссылаться на текущую функцию.
+
+Внешний код все ещё содержит переменные sayHi и welcome, но теперь func – это «внутреннее имя функции», таким образом
+она может вызвать себя изнутри.
+
+Функции – это объекты.
+
+Их свойства:
+
+name – имя функции. Обычно берётся из объявления функции, но если там нет – JavaScript пытается понять его из контекста.
+length – количество аргументов в объявлении функции. Троеточие («остаточные параметры») не считается.
+Если функция объявлена как Function Expression (вне основного потока кода) и имеет имя, тогда это называется
+Named Function Expression (Именованным Функциональным Выражением). Это имя может быть использовано для ссылки на себя
+же, для рекурсивных вызовов и т.п.
+
+
+    */
+
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+    'use strict';
+
+    // Цепочка промисов
+    new Promise(function(resolve, reject) {
+
+        setTimeout(() => resolve(1), 1000); // (*)
+
+    }).then(function(result) { // (**)
+
+        alert(result); // 1
+        return result * 2;
+
+    }).then(function(result) { // (***)
+
+        alert(result); // 2
+        return result * 2;
+
+    }).then(function(result) {
+
+        alert(result); // 4
+        return result * 2;
+
+    });
+
+
+    // Возвращаем промисы
+    // Обработчик handler, переданный в .then(handler), может вернуть промис.
+    //
+    //     В этом случае дальнейшие обработчики ожидают, пока он выполнится, и затем получают его результат.
+    //
+    //     Например:
+
+    new Promise(function(resolve, reject) {
+
+        setTimeout(() => resolve(1), 1000);
+
+    }).then(function(result) {
+
+        alert(result); // 1
+
+        return new Promise((resolve, reject) => { // (*)
+            setTimeout(() => resolve(result * 2), 1000);
+        });
+
+    }).then(function(result) { // (**)
+
+        alert(result); // 2
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => resolve(result * 2), 1000);
+        });
+
+    }).then(function(result) {
+
+        alert(result); // 4
+
+    });
+    // Здесь первый .then показывает 1 и возвращает новый промис new Promise(…) в строке (*). Через одну секунду этот промис успешно выполняется, и его результат (аргумент в resolve, то есть result * 2) передаётся обработчику в следующем .then. Он находится в строке (**), показывает2 и делает то же самое.
+    //
+    //     Таким образом, как и в предыдущем примере, выводятся 1 → 2 → 4, но сейчас между вызовами alert существует пауза в 1 секунду.
+    //
+    //     Возвращая промисы, мы можем строить цепочки из асинхронных действий.
+
+
+    // Пример: loadScript
+
+    loadScript("/article/promise-chaining/one.js")
+        .then(function(script) {
+            return loadScript("/article/promise-chaining/two.js");
+        })
+        .then(function(script) {
+            return loadScript("/article/promise-chaining/three.js");
+        })
+        .then(function(script) {
+            // вызовем функции, объявленные в загружаемых скриптах,
+            // чтобы показать, что они действительно загрузились
+            one();
+            two();
+            three();
+        });
+
+    // Этот же код можно переписать немного компактнее, используя стрелочные функции:
+
+        loadScript("/article/promise-chaining/one.js")
+            .then(script => loadScript("/article/promise-chaining/two.js"))
+            .then(script => loadScript("/article/promise-chaining/three.js"))
+            .then(script => {
+                // скрипты загружены, мы можем использовать объявленные в них функции
+                one();
+                two();
+                three();
+            });
+
+    // Здесь каждый вызов loadScript возвращает промис, и следующий обработчик в .then срабатывает, только когда
+    // этот промис завершается. Затем инициируется загрузка следующего скрипта и так далее. Таким образом, скрипты загружаются один за другим.
+
+
+    
+</script>
+</body>
+</html>

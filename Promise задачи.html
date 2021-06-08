@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+    'use strict';
+
+    // Что выведет код ниже?
+
+        let promise = new Promise(function(resolve, reject) {
+            resolve(1);
+
+            setTimeout(() => resolve(2), 1000);
+        });
+
+    promise.then(alert); //1 Второй вызов resolve будет проигнорирован,
+    // поскольку учитывается только первый вызов reject/resolve. Все последующие вызовы – игнорируются.
+
+  /*  Может быть что-то одно: либо результат, либо ошибка
+    Исполнитель должен вызвать что-то одно: resolve или reject. Состояние промиса может быть изменено только один раз.
+
+        Все последующие вызовы resolve и reject будут проигнорированы:
+
+        let promise = new Promise(function(resolve, reject) {
+            resolve("done");
+
+            reject(new Error("…")); // игнорируется
+            setTimeout(() => resolve("…")); // игнорируется
+        });
+*/
+</script>
+</body>
+</html>

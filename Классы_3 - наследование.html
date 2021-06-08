@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    class Animal {
+
+        constructor(name) {
+            this.name = name;
+        }
+
+    }
+
+    class Rabbit extends Animal {
+        constructor(name) {
+            super(name);
+            this.created = Date.now();
+        }
+    }
+
+    let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
+    alert(rabbit.name);
+
+
+</script>
+<body>
+
+</body>
+</html>

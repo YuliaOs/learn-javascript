@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    'use strict';
+
+    function findItem(arr) {
+        for(let a = 0; a < arr.length; a++) {
+            for (let b = 1; b < arr.length; b++) {
+
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > arr[a] || arr[i] < arr[b] && arr[i] != arr[a] && arr[i] != arr[b]) {
+
+                        return alert(`элемент ${arr[i]} с индексом ${i} отличается от других в данном массиве`);
+                    }
+                }
+            }
+        }
+
+    }
+
+    let arr1 = [3,4,4,4];
+    findItem(arr1);
+
+
+  /*
+
+
+    function findItem(arr) {
+        for(let a = 0; a < arr.length; a++) {
+            for (let b = 1; b < arr.length; b++) {
+
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > arr[a] || arr[i] < arr[b] && arr[i] != arr[a] && arr[i] != arr[b]) {
+
+                        return alert(`элемент ${arr[i]} с индексом ${i}`);
+                    }
+                }
+            }
+        }
+
+    }
+let allLengthSide = [2,5,5,5];
+    findItem(allLengthSide);*/
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>
